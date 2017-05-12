@@ -10,3 +10,9 @@ DelayedGreeter.prototype.greet = function() {
 
 const greeter = new DelayedGreeter('World');
 greeter.greet(); // will print "Hello undefined"
+
+DelayedGreeter.prototype.arrow = function() {
+    setTimeout(() => console.log("Hello " + this.name + " from arrow"), 500);
+}
+
+greeter.arrow();
